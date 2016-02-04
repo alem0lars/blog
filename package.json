@@ -1,0 +1,10 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "alem0lars blog",
+  "author": "Alessandro Molari",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "bower": "^1.7.7"
+  }
+}

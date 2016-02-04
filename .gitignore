@@ -1,0 +1,16 @@
+# Python VirtualEnv.
+/.venv/
+
+# Python cache.
+/__pycache__/
+
+# Pid files.
+/srv.pid
+/pelican.pid
+
+# Theme.
+/node_modules/
+/theme/static/bower_components/
+
+# Website output.
+/output/
