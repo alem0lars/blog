@@ -1,1 +1,0 @@
-../../../ext-data/ctfs/2016-sharif-ctf/rail-fence-cipher/writeup.rst

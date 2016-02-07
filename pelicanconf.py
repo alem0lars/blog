@@ -39,9 +39,6 @@ JINJA_FILTERS = {
 PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["materialbox"]
 
-# Pygments options.
-PYGMENTS_RST_OPTIONS={'linenos': 'inline'}
-
 # The maximum number of articles to include on a page, not including orphans.
 # False to disable pagination.
 DEFAULT_PAGINATION = 16
