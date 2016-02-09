@@ -1,4 +1,4 @@
-import os
+import os, glob
 
 
 # Base URL of your website. Not defined by default, so it is best to specify
@@ -36,8 +36,12 @@ JINJA_FILTERS = {
     } # Reversed for descending order.
 
 # Enable plugins.
-PLUGIN_PATHS = ["plugins"]
+PLUGIN_PATHS = ["plugins", "plugins/official"]
 PLUGINS = ["materialbox"]
+
+# Static files.
+STATIC_PATHS = list(map(lambda x: os.path.relpath(x, 'content'),
+                    glob.glob('content/ctfs/*/*/data')))
 
 # The maximum number of articles to include on a page, not including orphans.
 # False to disable pagination.

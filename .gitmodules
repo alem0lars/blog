@@ -1,3 +1,6 @@
 [submodule "content/ctfs"]
 	path = content/ctfs
 	url = git@github.com:alem0lars/ctfs
+[submodule "plugins/official"]
+	path = plugins/official
+	url = https://github.com/getpelican/pelican-plugins

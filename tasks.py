@@ -47,6 +47,7 @@ def build(production=False):
 @invoke.task
 def regenerate():
     """Automatically regenerate site upon file modification"""
+    print('Watching site changes..')
     invoke.run('pelican -r -s pelicanconf.py')
 
 @invoke.task
