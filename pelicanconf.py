@@ -45,8 +45,10 @@ skinparam backgroundcolor transparent
 """
 
 # Static files.
-STATIC_PATHS = list(map(lambda x: os.path.relpath(x, 'content'),
-                    glob.glob('content/ctfs/*/*/data')))
+STATIC_PATHS = []
+for reldir in ['data', 'src']:
+    STATIC_PATHS += list(map(lambda x: os.path.relpath(x, 'content'),
+                         glob.glob('content/ctfs/*/*/{}'.format(reldir))))
 
 # The maximum number of articles to include on a page, not including orphans.
 # False to disable pagination.
