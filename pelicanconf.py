@@ -36,13 +36,13 @@ JINJA_FILTERS = {
     } # Reversed for descending order.
 
 # Enable plugins.
-PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["materialbox", "plantuml"]
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['materialbox', 'plantuml', 'assets']
 
 # PlantUML plugin configuration.
-PLANTUML_PREAMBLE = """
+PLANTUML_PREAMBLE = '''
 skinparam backgroundcolor transparent
-"""
+'''
 
 # Static files.
 STATIC_PATHS = []

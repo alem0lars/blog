@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block head %}
+  {{ super() }}
+
+  {% for keyword in page.keywords %}
+    <meta name="keywords" contents="{{ keyword }}" />
+  {% endfor %}
+
+  {% for description in page.description %}
+    <meta name="description" contents="{{ description }}" />
+  {% endfor %}
+{% endblock %}
+
+{% block title %}{{ SITENAME }} - {{ page.title }}{% endblock %}
+
+{% block content %}
+  <div class="page">
+    <h1 itemprop="name">
+      <a href="{{ SITEURL }}/{{ page.url }}"
+         rel="bookmark"
+         class="orange-text"
+         title="Permalink vers {{ page.title | striptags }}">
+         {{ page.title }}
+      </a>
+    </h1>
+    <div class="flow-text section" itemprop="text">
+      {{ page.content }}
+    </div>
+  </div>
+{% endblock %}
+
+<!-- vim: set filetype=htmldjango -->

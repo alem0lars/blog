@@ -1,3 +1,9 @@
+Gentoo setup
+============
+
+:status: hidden
+
+
 Introduction
 ------------
 

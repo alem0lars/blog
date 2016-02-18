@@ -1,4 +1,5 @@
 pelican
-invoke
+webassets
 beautifulsoup4
 pygments
+invoke
