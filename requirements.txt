@@ -1,5 +1,0 @@
-pelican
-webassets
-beautifulsoup4
-pygments
-invoke

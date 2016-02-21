@@ -1,0 +1,15 @@
+.navbar-fixed
+  %nav
+    .nav-wrapper
+      %a{href: "#!", class: "brand-logo"} alem0lars
+      .input-field
+        %input#search{type: "search", required: true}
+          %label{for: "search"}= icon "search"
+          = icon "close"
+      %ul.right.hide-on-med-and-down
+        %li
+          %a{href: "sass.html"}= icon :search
+        %li
+          %a{href: "foo.html"}= icon :view_module
+        %li
+          %a{href: "bar.html"}= icon :more_vert

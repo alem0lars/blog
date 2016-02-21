@@ -1,0 +1,80 @@
+- # Same as `apple-touch-icon-57x57.png`, for retina iPad with iOS7.
+  rel:  "apple-touch-icon-precomposed"
+  icon: "apple-touch-icon-152x152-precomposed.png"
+- # Same as `apple-touch-icon-57x57.png`, for retina iPad with <= iOS6.
+  rel:  "apple-touch-icon-precomposed"
+  icon: "apple-touch-icon-144x144-precomposed.png"
+- # Same as `apple-touch-icon-57x57.png`, for retina iPhone with iOS7.
+  rel:  "apple-touch-icon-precomposed"
+  icon: "apple-touch-icon-120x120-precomposed.png"
+- # Same as `apple-touch-icon-57x57.png`, for retina iPhone with <= iOS6.
+  rel:  "apple-touch-icon-precomposed"
+  icon: "apple-touch-icon-114x114-precomposed.png"
+- # Same as `apple-touch-icon-57x57.png`, for non-retina iPad with iOS7.
+  rel:  "apple-touch-icon-precomposed"
+  icon: "apple-touch-icon-76x76-precomposed.png"
+- # Same as `apple-touch-icon-57x57.png`, for non-retina iPad with <= iOS6.
+  rel:  "apple-touch-icon-precomposed"
+  icon: "apple-touch-icon-72x72-precomposed.png"
+- # Same as `apple-touch-icon-57x57.png`, for non-retina iPhone with iOS7.
+  rel:  "apple-touch-icon-precomposed"
+  icon: "apple-touch-icon-60x60-precomposed.png"
+- # iPhone and iPad users can turn web pages into icons on their home
+  # Screen. such link appears as a regular iOS native application. When this
+  # happens, the device looks for a specific picture. The 57x57 resolution
+  # is convenient for non-retina iPhone with iOS6 or prior. Learn more in
+  # apple docs
+  rel:  "apple-touch-icon-precomposed"
+  icon: "apple-touch-icon-57x57-precomposed.png"
+- # Same as `apple-touch-icon.png`, expect that is already have rounded
+  # corners (but neither drop shadow nor gloss effect).
+  rel:  "apple-touch-icon-precomposed"
+  icon: "apple-touch-icon-precomposed.png"
+  size: "57x57"
+- # Same as `apple-touch-icon-57x57.png`, for "default" requests, as some
+  # devices may look for this specific file. this picture may save some
+  # 404 errors in your http logs. See apple docs.
+  rel:  "apple-touch-icon"
+  icon: "apple-touch-icon.png"
+  size: "57x57"
+- # For Android Chrome m31+.
+  rel:  "icon"
+  icon: "favicon-196x196.png"
+- # For Opera speed dial (up to Opera 12; this icon is deprecated starting
+  # from Opera 15), although the optimal icon is not square but rather
+  # 256x160. If Opera is a major platform for you, you should create this
+  # icon yourself.
+  rel:  "icon"
+  icon: "favicon-160x160.png"
+- # For Google TV.
+  rel:  "icon"
+  icon: "favicon-96x96.png"
+- # For Safari on Mac OS.
+  rel:  "icon"
+  icon: "favicon-32x32.png"
+- # The classic favicon, displayed in the tabs.
+  rel:  "icon"
+  icon: "favicon-16x16.png"
+- # The classic favicon, displayed in the tabs.
+  rel:  "icon"
+  icon: "favicon.png"
+  size: "16x16"
+- # Used by IE, and also by some other browsers if we are not careful.
+  rel:  "shortcut icon"
+  icon: "favicon.ico"
+  size: "64x64,32x32,24x24,16x16"
+- rel:  "msapplication-TileImage"
+  icon: "mstile-70x70.png"
+  size: "70x70"
+- rel:  "msapplication-TileImage"
+  icon: "mstile-144x144.png"
+  size: "144x144"
+- rel:  "msapplication-TileImage"
+  icon: "mstile-150x150.png"
+  size: "150x150"
+- rel:  "msapplication-TileImage"
+  icon: "mstile-310x310.png"
+  size: "310x310"
+- rel:  "msapplication-TileImage"
+  icon: "mstile-310x150.png"
+  size: "310x150"

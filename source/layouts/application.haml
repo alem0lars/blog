@@ -1,0 +1,33 @@
+<!doctype html>
+
+%html
+
+  %head
+    %title= yield_content(:title) || data.site.title
+
+    -# Site informations.
+    %meta{name: "description", content: data.site.description}
+    %meta{name: "keywords", content: data.site.keywords.join(", ")}
+
+    -# Author informations.
+    %meta{name: "author", content: data.author.name}
+    %link{rel:  "author", href: "/humans.txt", type: "text/plain"}
+    %link{rel:  "author", href: data.author.home}
+
+    -# Global site settings.
+    %meta{charset: "utf-8"}
+    %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", name: "viewport"}
+
+    -# Head assets.
+    = favicon_tags
+    %link{rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
+    = stylesheet_link_tag :app
+
+  %body{class: page_classes}
+    -# Website content.
+    = partial "layouts/application/header"
+    #search-box
+    = yield
+    -# Body assets.
+    = javascript_include_tag :app

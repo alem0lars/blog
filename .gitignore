@@ -1,19 +1,16 @@
-# Binaries.
-/bin/
+# Ignore bundler config
+/.bundle
 
-# Python VirtualEnv.
-/.venv/
+# Ignore the build directory
+/build
 
-# Python cache.
-**/__pycache__/
+# Ignore cache
+/.sass-cache
+/.cache
 
-# Pid files.
-/srv.pid
-/pelican.pid
+/node_modules
 
-# Theme.
-/node_modules/
-/theme/static/bower_components/
+# Ignore .DS_store file
+.DS_Store
 
-# Website output.
-/output/
+/.tmp

@@ -1,3 +1,0 @@
-[submodule "content/ctfs"]
-	path = content/ctfs
-	url = git@github.com:alem0lars/ctfs
