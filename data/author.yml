@@ -1,3 +1,10 @@
 name: "Alessandro Molari"
 email: "molari.alessandro@gmail.com"
 home:  "https://alem0lars.me"
+social:
+  - title: Github
+    url: https://github.com/alem0lars
+  - title: Twitter
+    url: https://twitter.com/alem0lars
+  - title: LinkedIN
+    url: https://linkedin.com/in/molarialessandro

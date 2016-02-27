@@ -1,0 +1,23 @@
+%footer.page-footer.grey.darken-4
+  .container
+    .row
+      .col.l6.s12
+        %h5.grey-text About me
+        %p.grey-text TODO ABOUT
+      .col.l3.s12
+        %h5.grey-text Feeds
+        %ul
+          %li
+            %a.grey-text{href: "/atom.xml", title: "Atom feed for #{data.site.name}"} Atom
+      .col.l3.s12
+        - if data.author.social
+          %h5.grey-text Social
+          %ul
+            - data.author.social.each do |info|
+              %li
+                %a.grey-text{href: info.url}= info.title
+  .footer-copyright
+    .container.center.grey-text.text-darken-2
+      Carefully handcrafted with
+      = icon :favorite
+      CC-BY-NC-SA

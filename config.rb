@@ -87,7 +87,6 @@ end
 # Enable and configure `middleman-livereload`.
 configure :development do
   activate :livereload,
-    host: "127.0.0.1",
     # Reload Javascript/CSS with complete reload of the page (not in-place).
     apply_js_live: false, apply_css_live: false
 end

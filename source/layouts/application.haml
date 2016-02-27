@@ -17,17 +17,29 @@
     -# Global site settings.
     %meta{charset: "utf-8"}
     %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}
-    %meta{content: "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", name: "viewport"}
+    %meta{content: "width=device-width,user-scalable=no," \
+                   "initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0",
+          name: "viewport"}
+
+    -# RSS autodiscovery.
+    %link{rel: "alternate", type: "application/rss+atom", href: "/atom.xml"
+          title: "Atom Feed for #{data.site.url}"}
 
     -# Head assets.
     = favicon_tags
-    %link{rel: "stylesheet", href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
+    %link{rel: "stylesheet",
+          href: "https://fonts.googleapis.com/icon?family=Material+Icons"}
     = stylesheet_link_tag :app
 
   %body{class: page_classes}
     -# Website content.
     = partial "layouts/application/header"
-    #search-box
-    = yield
+    .container
+      = yield
     -# Body assets.
+    :javascript
+      window.initSearchPipeline = function() {
+        #{search_lunr_js_pipeline}
+      }
+      window.searchIndexPath = #{search_index_path}
     = javascript_include_tag :app
