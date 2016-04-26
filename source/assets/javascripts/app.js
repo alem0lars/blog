@@ -13,8 +13,8 @@ $(document).ready(function() {
     $element.leanModal({
       dismissible: String($element.data("dismissible")).toLowerCase() === "true",
       opacity: parseInt($element.data("opacity")),
-      in_duration: parseFloat($element.data("in-duration")),
-      out_duration: parseFloat($element.data("out-duration"))
+      in_duration: parseFloat($element.data("in")),
+      out_duration: parseFloat($element.data("out"))
     });
   });
 

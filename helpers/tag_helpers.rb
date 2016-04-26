@@ -4,34 +4,34 @@ module TagHelpers
   TRIGGER_DROPDOWN_CLASS = "trigger-dropdown"
   TRIGGER_MODAL_CLASS    = "trigger-modal"
 
-  def link_to_dropdown(name, &blk)
-    fail "No content provided" unless block_given?
-    content_tag(:a, class: TRIGGER_DROPDOWN_CLASS, "data-activates": name, &blk)
-  end
-
-  def link_to_sidenav(name, &blk)
-    fail "No content provided" unless block_given?
-    content_tag(:a, class: TRIGGER_SIDENAV_CLASS, "data-activates": name, &blk)
-  end
-
-  def link_to_modal(target_id, dismissible: true, opacity: 8,
-                    in_duration: 300, out_duration: 200, &blk)
-    fail "No content provided" unless block_given?
+  def link_to_dropdown(name, content: nil)
     content_tag(:a,
-      class: TRIGGER_SIDENAV_CLASS,
-      href: "##{target_id}",
-      "data-dismissible": dismissible ? "true" : "false",
-      "data-opacity": opacity,
-      "data-in-duration": in_duration,
-      "data-out-duration": out_duration,
-      &blk)
+                content,
+                class: TRIGGER_DROPDOWN_CLASS,
+                data: {activates: "dropdown-#{name}"})
   end
 
-  def tooltipped(tooltip: nil, pos: nil)
-    fail("Invalid tooltip") if tooltip.nil? || tooltip.empty?
-    fail("Invalid content") if content.nil? || content.empty?
+  def link_to_sidenav(name, content: nil)
+    content_tag(:a,
+                content,
+                class: TRIGGER_SIDENAV_CLASS,
+                data: {activates: "sidenav-#{name}"})
+  end
 
-    fragment = Nokogiri::HTML.fragment(yield)
+  def link_to_modal(name, content: nil, dismissible: true, opacity: 8,
+                    in_duration: 300, out_duration: 200)
+    content_tag(:a,
+                content,
+                class: TRIGGER_SIDENAV_CLASS,
+                href: "#modal-#{name}",
+                data: {dismissible: dismissible, opacity: opacity,
+                       in: in_duration, out: out_duration})
+  end
+
+  def tooltipped(content: nil, tooltip: nil, pos: nil, &blk)
+    fail "Invalid tooltip" unless tooltip
+
+    fragment = Nokogiri::HTML.fragment(content)
 
     fragment[:"data-tooltip"]  = tooltip
     fragment[:"data-position"] = pos unless pos.nil? || pos.empty?

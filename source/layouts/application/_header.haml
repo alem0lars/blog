@@ -4,14 +4,11 @@
       %a{href: "#!", class: "brand-logo"}= data.site.title
       %ul.right.hide-on-med-and-down
         %li
-          = tooltipped(tooltip: "Search", pos: :bottom) do
-            = link_to_dropdown("dropdown-pages") do
-            %a{href: "#!"}= icon :search
+          -# tooltipped(tooltip: "Search", pos: :bottom) do
+          = link_to_dropdown :search, content: icon(:search)
         %li
-          = tooltipped(tooltip: "Articles", pos: :bottom) do
-            = link_to_modal("modal-pages") do
-              = icon :book
+          -# tooltipped(tooltip: "Articles", pos: :bottom) do
+          = link_to_modal :pages, content: icon(:book)
         %li
-          = tooltipped(tooltip: "Articles", pos: :bottom) do
-            = link_to_sidenav("nav-articles") do
-              = icon :description
+          -# tooltipped(tooltip: "Articles", pos: :bottom) do
+          = link_to_sidenav :articles, content: icon(:description)
